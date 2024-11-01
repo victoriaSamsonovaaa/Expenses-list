@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
+struct MainView: View {
     @Environment(\.modelContext) var modelContext
     
     @Query var expenses: [Expense]
@@ -55,7 +55,6 @@ struct ContentView: View {
                     }
                 }
                 
-                
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Add expense", systemImage: "plus") {
                         showingAddScreen.toggle()
@@ -74,7 +73,7 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    MainView()
 }
 
 
